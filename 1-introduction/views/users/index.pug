@@ -1,13 +1,16 @@
-h1 USER LIST
-a(href="/users/create") New user create
-form(action="/users/search" method='get')
-	input(type="text" name="q" value=query)
-	button Search
+extends ../layout/common
 
-ul
-	each user in users
-		li
-			span=user.name
-			span &nbsp;
-			a(href="/users/"+user.id) View
+block content
+	h1 USER LIST
+	a(href="/users/create") New user create
+	form(action="/users/search" method='get')
+		input(type="text" name="q" value=query)
+		button Search
+
+	ul
+		each user in users
+			li
+				span=user.name
+				span &nbsp;
+				a(href="/users/"+user.id) View
 			
