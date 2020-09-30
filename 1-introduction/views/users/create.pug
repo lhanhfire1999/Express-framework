@@ -1,10 +1,19 @@
 extends ../layout/common
 
-block content	
-	h1 New user create 
+block content 
+  h1 New user create 
+  
+  if errors
+    each error in errors
+      .alert.alert-danger #{error}
 
-	form(action="/users/create" method="post")
-		label Name:
-		input(type="text" name="name")
-		button Create 
-		
+
+  form(action="/users/create" method="post")
+    .form-group
+      label(for="name") Name:
+      input.form-control(type="text", name="name", id="name", value=values ? values.name : '' )
+    .form-group
+      label(for="phone") Phone:
+      input.form-control(type="text", name="phone", id="phone", value=values ? values.phone : '' )
+    button.btn.btn-primary Create 
+    
