@@ -33,24 +33,10 @@ module.exports.get = function(req,res){
 };
 
 module.exports.postCreate = function(req,res){
-  var errors=[];
-  if(!req.body.name){
-    errors.push('Name is required');
-  }
+  req.body.id = shortid.generate();
 
-  if(!req.body.phone){
-    errors.push('Phone is required');
-  }
+  console.log(res.locals.success);
 
-  if(errors.length){
-    res.render('users/create',{
-      errors: errors,
-      values: req.body
-    });
-    return;
-  }
-
-	req.body.id = shortid.generate();
 	db.get('users').push(req.body).write();
 	res.redirect('/users');
 };
