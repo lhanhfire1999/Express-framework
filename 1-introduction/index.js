@@ -1,6 +1,10 @@
 var express = require('express');
 var cookieParser = require('cookie-parser');
-var userRoute = require('./routes/user.route.js');
+var userRoute = require('./routes/user.route');
+var authRoute = require('./routes/auth.route');
+
+var authMiddleware = require('./middleware/auth.middleware')
+
 var app = express();
 
 var port = 3000;
@@ -16,15 +20,16 @@ app.use(cookieParser());
 app.use(express.static('public'));
 
 app.get('/', function(req,res){
-	res.render('index',{
-		name: 'Anh'
-	});
+  res.render('index',{
+    name: 'Anh'
+  });
 });
 
-app.use('/users',userRoute);
+app.use('/users',authMiddleware.requireLogin,userRoute);
 
+app.use('/auth',authRoute);
 
 app.listen(port,function(){
-	console.log('Server listening on port', port);
+  console.log('Server listening on port', port);
 });
 

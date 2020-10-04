@@ -3,7 +3,9 @@
     {
       "name": "Anh",
       "phone": "0934077941",
-      "id": "OYMVjUWs8"
+      "id": "OYMVjUWs8",
+      "email": "lhanhfire1999@gmail.com",
+      "password": "12345"
     },
     {
       "name": "Long",
@@ -11,14 +13,9 @@
       "id": "JYS3jC_bJ"
     },
     {
-      "name": "Sung",
-      "phone": "4444",
-      "id": "G_1S_0_in"
-    },
-    {
-      "name": "asd",
-      "phone": "asd",
-      "id": "G23fMFREc"
+      "name": "Sinh",
+      "phone": "0000000",
+      "id": "_e-DfCdss"
     }
   ]
 }
