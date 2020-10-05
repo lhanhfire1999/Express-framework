@@ -10,12 +10,9 @@
     {
       "name": "Long",
       "phone": "123",
-      "id": "JYS3jC_bJ"
-    },
-    {
-      "name": "Sinh",
-      "phone": "0000000",
-      "id": "_e-DfCdss"
+      "id": "JYS3jC_bJ",
+      "email": "test@gmail.com",
+      "password": "827ccb0eea8a706c4c34a16891f84e7b"
     }
   ]
 }
