@@ -8,12 +8,16 @@ block content
       .alert.alert-danger #{error}
 
 
-  form(action="/users/create" method="post")
+  form(action="/users/create", method="post", enctype="multipart/form-data")
     .form-group
       label(for="name") Name:
       input.form-control(type="text", name="name", id="name", value=values ? values.name : '' )
     .form-group
       label(for="phone") Phone:
       input.form-control(type="text", name="phone", id="phone", value=values ? values.phone : '' )
+    .form-group
+      label(for="avatar") Avatar:
+      input.form-control-file(type="file", name="avatar", id="avatar", )
+
     button.btn.btn-primary Create 
     
