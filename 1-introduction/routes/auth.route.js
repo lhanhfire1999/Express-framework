@@ -1,7 +1,8 @@
 var express = require('express');
-var router = express.Router();
-var db =require('../db')
+
 var authController= require('../controller/auth.controller');
+
+var router = express.Router();
 
 router.get('/login', authController.login);
 

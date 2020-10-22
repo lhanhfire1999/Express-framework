@@ -1,7 +1,8 @@
 var express = require('express');
-var router = express.Router();
-var db =require('../db')
+
 var productController= require('../controller/product.controller');
+
+var router = express.Router();
 
 router.get('/',productController.index);
 
