@@ -3,7 +3,7 @@ var multer  = require('multer');
 
 var router = express.Router();
 var db =require('../db.js');
-var userController= require('../controller/user.controller.js');
+var userController= require('../controllers/user.controller.js');
 var validate = require('../validate/user.validate.js');
 
 var upload = multer({ dest: './public/uploads/' })
